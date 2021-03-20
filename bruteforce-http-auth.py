@@ -437,12 +437,7 @@ def main():
 
 	if len(targets_included) > 0:
 		# Ask for bruteforce validation
-		validation = log.input('Launch bruteforce on included targets [y/N] ? ')
-		log.info('')
-
-		if not validation.lower() == 'y':
-			log.info('Bruteforce not launch')
-			exit(0)
+		
 
 		# Bruteforce (multithreaded)
 		queue_test = queue.Queue(maxsize=10*args.workers)
